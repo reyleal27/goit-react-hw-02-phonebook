@@ -22,7 +22,7 @@ export class ContactList extends Component {
   }
 };
 
-ContactList.prototype = {
+ContactList.propTypes = {
     filterContact: PropTypes.func.isRequired,
     deleteContact: PropTypes.func.isRequired,
 }
