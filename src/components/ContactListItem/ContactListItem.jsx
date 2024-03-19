@@ -1,6 +1,7 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import React, { Component } from 'react';
 import './ContactListItemStyle.css';
+import PropTypes from 'prop-types';
 
 export class ContactListItem extends Component {
   handleDelete = () => {
@@ -25,5 +26,10 @@ export class ContactListItem extends Component {
       </li>
     );
   }
+};
+
+ContactListItem.prototype = {
+    filteredContact: PropTypes.func.isRequired,
+    deleteContact: PropTypes.func.isRequired,
 }
 

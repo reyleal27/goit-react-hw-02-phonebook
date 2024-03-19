@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './FilterContactStyle.css';
+import PropTypes from 'prop-types';
+
+
 export class Filter extends Component {
   handleFilterChange = e => {
     this.props.setFilter(e.target.value);
@@ -22,4 +25,9 @@ export class Filter extends Component {
       </div>
     );
   }
+};
+
+Filter.propTypes = {
+    filter: PropTypes.string.isRequired,
+    setFilter: PropTypes.func.isRequired,
 }

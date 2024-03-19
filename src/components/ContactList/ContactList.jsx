@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import './ContactListStyle.css';
+import PropTypes from 'prop-types';
 
 export class ContactList extends Component {
   render() {
@@ -19,4 +20,9 @@ export class ContactList extends Component {
       </ul>
     );
   }
+};
+
+ContactList.prototype = {
+    filterContact: PropTypes.func.isRequired,
+    deleteContact: PropTypes.func.isRequired,
 }

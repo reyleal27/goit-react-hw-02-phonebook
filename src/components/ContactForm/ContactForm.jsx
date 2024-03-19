@@ -11,7 +11,7 @@ export class ContactForm extends Component {
       Proptypes.shape({
         id: Proptypes.string.isRequired,
         name: Proptypes.string.isRequired,
-        number: Proptypes.string.isRequired,
+        number: Proptypes.number.isRequired,
       })
     ),
   };
